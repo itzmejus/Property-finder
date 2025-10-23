@@ -6,6 +6,9 @@ import Navbar from './Components/Navbar'
 import About from './Components/About'
 import AgentsPage from './Components/AgentsPage'
 import ComingSoonPage from './Components/ComingSoonPage'
+import ContactPage from './Components/ContactPage'
+import Footer from './Components/Footer'
+
 function App() {
 
   return (
@@ -18,8 +21,9 @@ function App() {
         <Route path="/agents" element={<AgentsPage />} />
         <Route path="/properties" element={<ComingSoonPage />} />
         <Route path="/blog" element={<ComingSoonPage />} />
-        <Route path="/contact" element={<ComingSoonPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

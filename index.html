@@ -12,6 +12,19 @@
 
 <body>
   <div id="root"></div>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: "#1E1E1E",
+            brandGold: "#C7A441",
+          },
+        },
+      },
+    };
+  </script>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 

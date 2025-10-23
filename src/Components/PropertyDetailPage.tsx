@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Bed, Bath, Maximize, MapPin, Heart, Share2, Mail, MessageCircle, ChevronLeft, ChevronRight, Home, User } from "lucide-react";
+import { Bed, Bath, Maximize, MapPin, Heart, Share2, Mail, MessageCircle, ChevronLeft, ChevronRight, Home, User, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { SAMPLE_PROPERTIES } from "../api/propertyData";
@@ -290,11 +290,6 @@ export default function PropertyDetailPage() {
                                     <a href="#" className="text-blue-600 hover:underline">Terms of Use</a>
                                 </div>
 
-                                {/* reCAPTCHA placeholder */}
-                                <div className="bg-gray-100 border border-gray-300 rounded p-4 flex items-center justify-center">
-                                    <span className="text-sm text-gray-600">I'm not a robot</span>
-                                </div>
-
                                 <button
                                     onClick={handleSubmit}
                                     className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-md transition-colors"
@@ -304,9 +299,9 @@ export default function PropertyDetailPage() {
 
                                 <button
                                     type="button"
-                                    className="w-full bg-white hover:bg-gray-50 text-gray-900 font-semibold py-3 rounded-md border-2 border-gray-300 transition-colors"
+                                    className="w-full flex items-center justify-center bg-white hover:bg-gray-50 text-gray-900 font-semibold py-3 rounded-md border-2 border-gray-300 transition-colors"
                                 >
-                                    Call
+                                    <Phone/>
                                 </button>
 
                                 <button

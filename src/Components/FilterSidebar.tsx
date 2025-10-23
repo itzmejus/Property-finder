@@ -87,7 +87,7 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
     <div className="space-y-8">
       {/* Emirates */}
       <div>
-        <h3 className="mb-4 text-lg font-semibold text-[hsl(var(--navy))]">Emirate</h3>
+        <h3 className="mb-4 text-lg font-semibold ">Emirate</h3>
         <div className="space-y-3">
           {EMIRATES.map((emirate) => (
             <div key={emirate} className="flex items-center space-x-2">
@@ -99,7 +99,7 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
               />
               <Label
                 htmlFor={`emirate-${emirate}`}
-                className="cursor-pointer text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="cursor-pointer text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 hover:text-[#C7A441]"
               >
                 {emirate}
               </Label>
@@ -110,7 +110,7 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
 
       {/* Bedrooms */}
       <div>
-        <h3 className="mb-4 text-lg font-semibold text-[hsl(var(--navy))]">Bedrooms</h3>
+        <h3 className="mb-4 text-lg font-semibold ">Bedrooms</h3>
         <div className="flex flex-wrap gap-2">
           {[1, 2, 3, 4, 5].map((count) => (
             <Button
@@ -120,7 +120,7 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
               onClick={() => toggleBedroom(count)}
               className={localFilters.bedrooms.includes(count) 
                 ? "bg-[hsl(var(--navy))] hover:bg-[hsl(var(--navy))]/90" 
-                : "border-gray-300"}
+                : "border-gray-300" }
             >
               {count}+
             </Button>
@@ -130,7 +130,7 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
 
       {/* Bathrooms */}
       <div>
-        <h3 className="mb-4 text-lg font-semibold text-[hsl(var(--navy))]">Bathrooms</h3>
+        <h3 className="mb-4 text-lg font-semibold ">Bathrooms</h3>
         <div className="flex flex-wrap gap-2">
           {[1, 2, 3, 4].map((count) => (
             <Button
@@ -150,8 +150,8 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
 
       {/* Price Range */}
       <div>
-        <h3 className="mb-4 text-lg font-semibold text-[hsl(var(--navy))]">Price Range</h3>
-        <div className="space-y-4">
+        <h3 className="mb-4 text-lg font-semibold ">Price Range</h3>
+        <div className="space-y-4 ">
           <Slider
             value={[localFilters.priceRange[0], localFilters.priceRange[1]]}
             onValueChange={updatePriceRange}
@@ -159,7 +159,7 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
             step={10000}
             className="w-full"
           />
-          <div className="flex justify-between text-sm text-gray-600">
+          <div className="flex justify-between text-sm text-black-900">
             <span>{localFilters.priceRange[0].toLocaleString()} AED</span>
             <span>{localFilters.priceRange[1].toLocaleString()} AED</span>
           </div>
@@ -168,7 +168,7 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
 
       {/* Amenities */}
       <div>
-        <h3 className="mb-4 text-lg font-semibold text-[hsl(var(--navy))]">Amenities</h3>
+        <h3 className="mb-4 text-lg font-semibold ">Amenities</h3>
         <div className="space-y-3">
           {AMENITIES.map((amenity) => (
             <div key={amenity} className="flex items-center space-x-2">
@@ -206,7 +206,7 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
       {/* Desktop Sidebar */}
       <div className="hidden lg:block w-80 border-r border-gray-200 bg-white p-6">
         <div className="mb-6 flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-[hsl(var(--navy))]">Filters</h2>
+          <h2 className="text-2xl font-bold ">Filters</h2>
         </div>
         <FilterContent />
       </div>
@@ -219,9 +219,9 @@ export default function FilterSidebar({ filters, onFilterChange }: FilterSidebar
               <SlidersHorizontal className="h-6 w-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="left" className="w-80 overflow-y-auto">
+          <SheetContent side="left" className="w-80 overflow-y-auto bg-[#1E1E1E] text-white ">
             <SheetHeader>
-              <SheetTitle className="text-2xl font-bold text-[hsl(var(--navy))]">Filters</SheetTitle>
+              <SheetTitle className="text-2xl font-bold">Filters</SheetTitle>
             </SheetHeader>
             <div className="mt-6">
               <FilterContent />
